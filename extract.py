@@ -35,20 +35,20 @@ with pdfplumber.open(pdf_path) as pdf:
                         all_extracted_data.append(data_dict)
 
 
-# Final
+# Mid
  for data in all_extracted_data:
      data_dict = {
          'sl': data['SL.'].strip(),
          'course': data['Course'].strip(),
          'section': data['Section'].strip(),
-         'mid_date': datetime.datetime.strptime(data['Final Date'], '%d-%b-%y').date(),
+         'mid_date': datetime.datetime.strptime(data['Mid Date'], '%d-%b-%y').date(),
          'start_time': datetime.datetime.strptime(data['Start Time'], '%I:%M %p').time(),
          'end_time': datetime.datetime.strptime(data['End Time'], '%I:%M %p').time(),
          'room': data['Room.'].strip(),
          'mode': data['Mode'].strip(),
      }
 
-# Midterm
+# Final
 # for data in all_extracted_data:
 #   data_dict = {
 #        'sl': data['SL.'].strip(),
