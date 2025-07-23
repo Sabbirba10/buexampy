@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Exam Schedule</title>
+    <title>BRACU Exam Schedule</title>
     <link  rel="icon" href="{% static 'images/icon.jpg' %}">
     <style>
         body {
@@ -173,7 +173,7 @@
     <form method="post" action="/">
         {% csrf_token %}
         <div class="instruction-box">
-            Enter Course Code and Section to get your Custom Exam Routine
+            Enter Course Code and Section to get your Exam Routine
         </div>
         <label for="course">Course Code:</label>
         <input type="text" id="course" name="course" required>
@@ -190,7 +190,7 @@
         </div>
     </form>
 
-    <h2>Exam Routine: (Fall 2023 Final)</h2>
+    <h2>Exam Routine: </h2>
     <table border="1">
         <tr>
             <th>Section</th>
