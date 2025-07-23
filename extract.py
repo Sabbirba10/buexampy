@@ -8,7 +8,7 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "exam.settings")
 django.setup()
 
 from exam_schedule.models import ExamSchedule
-pdf_path = r'H:\Uni work\Assignment\exam routine\exam\Final Assessment Schedule Summer 2024.pdf'
+pdf_path = r'/Mid Term Schedule Summer 2025.pdf'
 
 # To store data from all pages
 all_extracted_data = []  
