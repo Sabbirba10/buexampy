@@ -21,5 +21,4 @@ tabula-py>=2.8.2
 typing_extensions>=4.8.0
 tzdata>=2023.3
 gunicorn>=23.0.0
-imgkit>=1.2.3
-wkhtmltoimage>=0.12.6
+imgkit>=1.2.2 
