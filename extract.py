@@ -8,7 +8,7 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "exam.settings")
 django.setup()
 
 from exam_schedule.models import ExamSchedule
-pdf_path = r'/Mid Term Schedule Summer 2025.pdf'
+pdf_path = r'./Mid Term Schedule Summer 2025.pdf'
 
 # To store data from all pages
 all_extracted_data = []  
@@ -36,29 +36,29 @@ with pdfplumber.open(pdf_path) as pdf:
 
 
 # Final
-# for data in all_extracted_data:
-#     data_dict = {
-#         'sl': data['SL.'].strip(),
-#         'course': data['Course'].strip(),
-#         'section': data['Section'].strip(),
-#         'mid_date': datetime.datetime.strptime(data['Final Date'], '%d-%b-%y').date(),
-#         'start_time': datetime.datetime.strptime(data['Start Time'], '%I:%M %p').time(),
-#         'end_time': datetime.datetime.strptime(data['End Time'], '%I:%M %p').time(),
-#         'room': data['Room.'].strip(),
-#         'mode': data['Mode'].strip(),
-#     }
+ for data in all_extracted_data:
+     data_dict = {
+         'sl': data['SL.'].strip(),
+         'course': data['Course'].strip(),
+         'section': data['Section'].strip(),
+         'mid_date': datetime.datetime.strptime(data['Final Date'], '%d-%b-%y').date(),
+         'start_time': datetime.datetime.strptime(data['Start Time'], '%I:%M %p').time(),
+         'end_time': datetime.datetime.strptime(data['End Time'], '%I:%M %p').time(),
+         'room': data['Room.'].strip(),
+         'mode': data['Mode'].strip(),
+     }
 
 # Midterm
-for data in all_extracted_data:
-    data_dict = {
-        'sl': data['SL.'].strip(),
-        'course': data['Course'].strip(),
-        'section': data['Section'].strip(),
-        'mid_date': datetime.datetime.strptime(data['Final Date'], '%d-%b-%y').date(),
-        'start_time': datetime.datetime.strptime(data['Start Time'], '%I:%M %p').time(),
-        'end_time': datetime.datetime.strptime(data['End Time'], '%I:%M %p').time(),
-        'room': data['Room.'].strip(),
-    }
+# for data in all_extracted_data:
+#   data_dict = {
+#        'sl': data['SL.'].strip(),
+#        'course': data['Course'].strip(),
+#       'section': data['Section'].strip(),
+#        'mid_date': datetime.datetime.strptime(data['Final Date'], '%d-%b-%y').date(),
+#       'start_time': datetime.datetime.strptime(data['Start Time'], '%I:%M %p').time(),
+#        'end_time': datetime.datetime.strptime(data['End Time'], '%I:%M %p').time(),
+#       'room': data['Room.'].strip(),
+#    }
 
     exam_schedule = ExamSchedule(**data_dict)
     exam_schedule.save()
