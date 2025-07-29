@@ -18,6 +18,3 @@ Database Management: SQLite
 
 Disclaimer:
 This project is not officially affiliated with BRAC University and is developed as a personal project for the benefit of BRACU students.
-
-Author: 
-Sadnan Nafis
