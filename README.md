@@ -15,6 +15,3 @@ Django: The web framework used to build the application, providing a robust foun
 HTML, CSS: Front-end technologies used to create the user interface and enhance the user experience.
 Python: The primary programming language used for backend logic and automation.
 Database Management: SQLite
-
-Disclaimer:
-This project is not officially affiliated with BRAC University and is developed as a personal project for the benefit of BRACU students.
