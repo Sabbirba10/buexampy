@@ -13,10 +13,15 @@ def main():
         raise ImportError(
             "Couldn't import Django. Are you sure it's installed and "
             "available on your PYTHONPATH environment variable? Did you "
-            "forget to activate a virtual environment?"
-        ) from exc
+            "forget to activate a virtual environment?") from exc
     execute_from_command_line(sys.argv)
 
 
 if __name__ == '__main__':
     main()
+import imgkit
+
+config = imgkit.config(
+    wkhtmltoimage='/nix/store/...-wkhtmltopdf-*/bin/wkhtmltoimage'
+)  # You may need to check the exact path with `which wkhtmltoimage`
+imgkit.from_url('http://google.com', 'out.jpg', config=config)
