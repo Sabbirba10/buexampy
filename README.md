@@ -1,17 +1,64 @@
-# Exam Schedule
+# BRACU Exam Routine Generator
 
-GitHub Project Repository: Custom Exam Routine Generator for BRACU Students (Django)
+A custom exam routine generator tailored for BRAC University (BRACU) students. Built with Django, this web application allows students to easily create and manage their personalized exam schedules.
 
-Description:
-This GitHub project repository hosts a custom exam routine generator tailored for students of BRAC University (BRACU). The application is developed using the Django web framework, providing an efficient and user-friendly way for BRACU students to create their personalized exam schedules.
+## Features
 
-# Features:
+- **User-friendly interface:** Input your course information and preferences to generate a custom exam routine.
+- **Customizable:** Tailor your exam schedule according to your course code and section.
+- **Modern technologies:** Built with Django (Python), HTML, CSS, and SQLite for robust performance and a smooth user experience.
 
-# User-friendly interface: 
-Easily input your course information and preferences to generate a custom exam routine. Tailor your exam schedule according to your course code and section.
+## Getting Started
 
-# Technologies Used:
-Django: The web framework used to build the application, providing a robust foundation for developing the exam routine generator.
-HTML, CSS: Front-end technologies used to create the user interface and enhance the user experience.
-Python: The primary programming language used for backend logic and automation.
-Database Management: SQLite
+### Prerequisites
+
+- Python 3.8+
+- pip
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```sh
+   git clone https://github.com/Sabbirba10/buexampy.git
+   cd your-repo-name
+   ```
+
+2. **Install dependencies:**
+
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+3. **Apply migrations:**
+
+   ```sh
+   python manage.py migrate
+   ```
+
+4. **Run the development server:**
+
+   ```sh
+   python manage.py runserver
+   ```
+
+5. Open your browser and go to `http://127.0.0.1:8000/`
+
+## Project Structure
+
+- `exam/` - Django project configuration
+- `exam_schedule/` - Main app containing models, views, templates, and URLs
+- `db.sqlite3` - SQLite database
+- `requirements.txt` - Python dependencies
+
+## Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+[MIT](LICENSE)
+
+---
+
+**GitHub Project Repository:** [https://github.com/Sabbirba10/buexampy](https://github.com/Sabbirba10/buexampy)
